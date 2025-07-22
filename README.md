@@ -120,6 +120,38 @@ The included Docker setup provides:
 - **Pre-configured voice models**
 - **Automatic startup**
 
+## 🎙️ Voice Models
+
+The default voice model used in this repository is **`en_GB-cori-high`** (British English, female voice).
+
+### 🔍 Exploring Voice Options
+
+- **Voice Samples**: Listen to different voice models at [Piper Voice Samples](https://rhasspy.github.io/piper-samples/)
+- **Piper Documentation**: Learn more about Piper TTS at [rhasspy/piper](https://github.com/rhasspy/piper?tab=readme-ov-file)
+
+### 🛠️ Changing Voice Models
+
+To use a different voice model:
+
+1. **Choose a voice** from the [voice samples page](https://rhasspy.github.io/piper-samples/)
+2. **Update the Dockerfile** - Replace `en_GB-cori-high` with your chosen voice model:
+   ```dockerfile
+   # Download your preferred voice model
+   RUN python3 -m piper.download_voices your-chosen-voice-model
+   
+   # Update the server command
+   CMD ["sh", "-c", "python3 -m piper.http_server -m your-chosen-voice-model"]
+   ```
+3. **Rebuild the Docker image**:
+   ```bash
+   docker build -t piper-tts-mcp .
+   docker compose up -d
+   ```
+
+### 🎨 Creating Custom Voices
+
+Creating your own custom voice requires additional effort and research. Please refer to the [Piper documentation](https://github.com/rhasspy/piper) for guidance on voice training and customization.
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit issues and pull requests.
