@@ -1,0 +1,7 @@
+services:
+  piper:
+    image: piper-tts-mcp:latest
+    container_name: piper
+    ports:
+      - 5000:5000
+    restart: unless-stopped
