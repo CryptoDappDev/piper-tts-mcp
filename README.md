@@ -2,6 +2,10 @@
 
 A **Model Context Protocol (MCP)** server that integrates [Piper TTS](https://github.com/rhasspy/piper) for high-quality text-to-speech functionality. This server provides a `speak` tool that converts text to speech and plays it directly through your speakers with customizable volume control.
 
+<a href="https://glama.ai/mcp/servers/@CryptoDappDev/piper-tts-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@CryptoDappDev/piper-tts-mcp/badge" alt="Piper TTS Server MCP server" />
+</a>
+
 ## ✨ Features
 
 - 🔊 **High-quality text-to-speech** using Piper TTS
